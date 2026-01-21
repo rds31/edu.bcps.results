@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://bcps.edu.bd/result/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>BCPS</title>
+  <link rel="icon" href="https://bcps.edu.bd/result/images/favicon.ico" type="image/x-icon">
+  <meta name="_token" content="{!! csrf_token() !!}">
+  <link href="./BCPS_files/css" rel="stylesheet" type="text/css">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./BCPS_files/bootstrap.min.css">
+  <link rel="stylesheet" href="./BCPS_files/font-awesome.min.css">
+  <script src="./BCPS_files/jquery.min.js.download"></script>
+  <script src="./BCPS_files/bootstrap.min.js.download"></script>
+  <!---
+          <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+           -->
+  <link rel="stylesheet" href="./BCPS_files/bootstrap.min.css">
+  <script type="text/javascript">
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-Token': $('meta[name=_token]').attr('content')
+    }
+  });
+  </script>
+  <style>
+  .a {
+    border-collapse: collapse;
+    width: 100%;
+    padding: 40px;
+  }
+
+  .as {
+    width: 550px;
+    margin: 10px auto;
+    border: 1px solid green;
+    height: 250px;
+  }
+
+  .tit {
+    width: 545px;
+    padding: 15px;
+
+    border-bottom: 1px solid green;
+  }
+
+  .footer {
+    background: #5d963f;
+    height: 40px;
+    margin-top: 7px;
+    font-weight: bold;
+    color: #ffffff;
+    padding-top: 10px;
+  }
+  </style>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1269.0" data-gr-ext-installed="">
+  <div class="container">
+    <div class="row well">
+      <div class="col-sm-2"><img src="./BCPS_files/logo.png"></div>
+      <div class="col-sm-7">
+        <h2 class="text-primary   ">Bangladesh College of Physicians &amp; Surgeons</h2>
+        <h3 style="color:green; text-align:center"> Examinations Department </h3>
+      </div>
+      <div class="col-sm-3">
+        <p><a href="https://bcps.edu.bd/result/#"><span class="glyphicon glyphicon-envelope"></span></a> exam@bcps.edu.bd</p>
+        <p><a href="https://bcps.edu.bd/result/#"><span class="glyphicon glyphicon-earphone"></span></a>02-222295006,</p>
+        <p><a href="https://bcps.edu.bd/result/#"><span class="glyphicon glyphicon-phone-alt"></span></a> 02-222291865 (PABX) EXT- 0/ 222/ 100
+      </p></div>
+    </div>
+
+    <div class="row">
+      <nav class="navbar navbar-default">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://www.bcps.edu.bd/">BCPS</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="http://www.bcps.edu.bd/">Home <span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="row">
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-7">
+        <div class="row" style="padding-right: 5px;">
+          <div class="panel panel-primary">
+            <div class="panel-heading">January - 2026 Examination Result</div>
+            <div class="panel-body">
+              <h5 style="color:green; text-align:center">Please Enter your Roll Number and Exam name</h5>
+              <form class="form" id="example4">
+                <div class="form-group">
+                  <label for="rollNo" class="col-sm-3 control-label">Roll:</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="id" name="rollNo" placeholder="Enter Six Digits Roll Number  000000" maxlength="6">
+                  </div>
+                </div>
+                <br><br>
+                <div class="form-group">
+                  <label for="exam_name" class="col-sm-3 control-label">Exam. Name:</label>
+                  <div class="col-sm-9">
+                    <select name="name" size="1" class="form-control" id="exam_name">
+                      <option value="">---------- Select Exam Name --------</option>
+                      <option value="0">FCPS PART-I</option>
+                      <option value="1">FCPS (Final) (Written)</option>
+                      <option value="2">FCPS (Final)</option>
+                      <option value="5">Preliminary FCPS (Written)</option>
+                      <option value="6">Preliminary FCPS</option>
+                      <option value="7">MCPS (Written)</option>
+                      <option value="8">MCPS </option>
+                      <option value="9">FCPS Midterm (Written)</option>
+                      <option value="10">FCPS Midterm </option>
+                      <option value="11">OSCE and IOE</option>
+                    </select>
+                  </div>
+                </div>
+                <br><br>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label"></label>
+                  <div class="col-sm-9">
+                    <button type="button" class="btn btn-primary btn-block show" data-toggle="modal" data-target="#myModal">Show Result</button>
+					
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="padding-right: 5px;">
+          <div class="panel panel-primary">
+            <div class="panel-heading">EXAM RELATED NOTICE</div>
+            <div class="panel-body">
+              <marquee width="100%" vspace="2" hspace="5" height="300" direction="up" scrollamount="2" align="top" onmouseout="this.start()" onmouseover="this.stop()">
+                <ul style="list-style-position: inside; margin: 0; padding: 0;">
+                                    <li style="padding: 5px 0px; color:#FF0000;">Please refresh the browser for getting Programme for
+                    Clinical, Oral &amp; Practical Examinations after 8:00 PM.</li>
+                                    <li style="padding: 5px 0px;">
+                    <a href="https://bcps.edu.bd/result/uploads/notice/1768918430_Schedule%20for%20Preliminary%20FCPS%20OSCE.pdf" target="_blank">Schedule for Preliminary FCPS OSCE                      <span style="color:#FF0000">
+                        (20-01-2026)
+                      </span>
+                    </a>
+                  </li>
+                                    <li style="padding: 5px 0px;">
+                    <a href="https://bcps.edu.bd/result/uploads/notice/1768831750_rollwise%20schedule%20.pdf" target="_blank">Roll Number Wise Clinical Examination Schedule of FCPS (Final) - Surgery                      <span style="color:#FF0000">
+                        (19-01-2026)
+                      </span>
+                    </a>
+                  </li>
+                                    <li style="padding: 5px 0px;">
+                    <a href="https://bcps.edu.bd/result/uploads/notice/1768830614_OSCE%20Notice%20for%20Sutdent%20OMS%20.pdf" target="_blank">Schedule for FCPS (Final) OSCE &amp; IOE (Oral &amp; Maxillofacial Surgery)                      <span style="color:#FF0000">
+                        (19-01-2026)
+                      </span>
+                    </a>
+                  </li>
+                                    <li style="padding: 5px 0px;">
+                    <a href="https://bcps.edu.bd/result/uploads/notice/1768744916_Document%2073.pdf" target="_blank">Roll Number Wise Clinical Examination Schedule of FCPS (Final) - Paediatrics                      <span style="color:#FF0000">
+                        (18-01-2026)
+                      </span>
+                    </a>
+                  </li>
+                                    <li style="padding: 5px 0px;">
+                    <a href="https://bcps.edu.bd/result/uploads/notice/1768743894_OSCE%20Notice%20for%20Surgery.pdf" target="_blank">Schedule for FCPS (Final) OSCE &amp; IOE (Surgery)                      <span style="color:#FF0000">
+                        (18-01-2026)
+                      </span>
+                    </a>
+                  </li>
+                                    <li style="padding: 5px 0px;">
+                    <a href="https://bcps.edu.bd/result/uploads/notice/1768663232_gynae%20schedule%20.pdf" target="_blank">Roll Number Wise Clinical Examination Schedule of FCPS (Final) - Obstetrics &amp; Gynaecology                      <span style="color:#FF0000">
+                        (17-01-2026)
+                      </span>
+                    </a>
+                  </li>
+                                    <li style="padding: 5px 0px;">
+                    <a href="https://bcps.edu.bd/result/uploads/notice/1768653499_OSCE%20Notice%20for%20Paediatrics%20pdf.pdf" target="_blank">Schedule for FCPS (Final) OSCE &amp; IOE (Paediatrics)                      <span style="color:#FF0000">
+                        (17-01-2026)
+                      </span>
+                    </a>
+                  </li>
+                                    <li style="padding: 5px 0px;">
+                    <a href="https://bcps.edu.bd/result/uploads/notice/1768486514_Document%2072.pdf" target="_blank">Schedule for FCPS (FInal) - Obstetrics &amp; Gynaecology                       <span style="color:#FF0000">
+                        (15-01-2026)
+                      </span>
+                    </a>
+                  </li>
+                                    <li style="padding: 5px 0px;">
+                    <a href="https://bcps.edu.bd/result/uploads/notice/1768463843_Document%2071.pdf" target="_blank">Reschedule of Exam, January-2026                      <span style="color:#FF0000">
+                        (15-01-2026)
+                      </span>
+                    </a>
+                  </li>
+                                    <li style="padding: 5px 0px;">
+                    <a href="https://bcps.edu.bd/result/uploads/notice/1768463748_Document%2070.pdf" target="_blank">Roll Number Wise Clinical &amp; Oral Examination Schedule of MCPS (Different Subject)                      <span style="color:#FF0000">
+                        (15-01-2026)
+                      </span>
+                    </a>
+                  </li>
+                                    <li style="padding: 5px 0px;">
+                    <a href="https://bcps.edu.bd/result/uploads/notice/1768322357_OSCE%20Notice%20for%20Sutdent%20for%20Medicine%20_260113_223444.pdf" target="_blank">Schedule for FCPS Midterm OSCE (Medicine)                      <span style="color:#FF0000">
+                        (13-01-2026)
+                      </span>
+                    </a>
+                  </li>
+                                    <li style="padding: 5px 0px;">
+                    <a href="https://bcps.edu.bd/result/uploads/notice/1768227590_OSCE%20Notice%20for%2013-1-2026.pdf" target="_blank">Schedule for FCPS Midterm OSCE                      <span style="color:#FF0000">
+                        (12-01-2026)
+                      </span>
+                    </a>
+                  </li>
+                                  </ul>
+              </marquee>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5">
+                <div class="row">
+          <div class="panel panel-primary">
+            <div class="panel-heading">JAN-2026 Examination Only
+              Final Result (PDF) </div>
+            <div class="panel-body">
+              <div class="panel-group" id="accordion">
+                                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="https://bcps.edu.bd/result/#divIdJAN20261">
+                        FCPS-PART-I                      </a>
+                    </h4>
+                  </div>
+                  <div id="divIdJAN20261" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <ul type="square">
+                                                <li class="active">
+                          <a href="organized.pdf">
+                            06-01-2026                          </a>
+                        </li>
+                                              </ul>
+                    </div>
+                  </div>
+                </div>
+                                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="https://bcps.edu.bd/result/#divIdJAN20269">
+                        MCPS                      </a>
+                    </h4>
+                  </div>
+                  <div id="divIdJAN20269" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <ul type="square">
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1768744416_mcps%20final.pdf">
+                            18-01-2026                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1768831391_Document%2076.pdf">
+                            19-01-2026                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1768918364_mcps.pdf">
+                            20-01-2026                          </a>
+                        </li>
+                                              </ul>
+                    </div>
+                  </div>
+                </div>
+                                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="https://bcps.edu.bd/result/#divIdJAN202611">
+                        Midterm FCPS                      </a>
+                    </h4>
+                  </div>
+                  <div id="divIdJAN202611" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <ul type="square">
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1767881596_Document%2063.pdf">
+                            08-01-2026                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1768055789_Document%2064.pdf">
+                            10-01-2026                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1768142840_Document%20665.pdf">
+                            11-01-2026                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1768229226_MID%2012-01122026081410.pdf">
+                            12-01-2026                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1768312709_DOC011326-01132026073523.pdf">
+                            13-01-2026                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1768404811_mid%20final-01142026090913.pdf">
+                            14-01-2026                          </a>
+                        </li>
+                                              </ul>
+                    </div>
+                  </div>
+                </div>
+                                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="https://bcps.edu.bd/result/#divIdJAN202612">
+                        OSCE &amp; IOE                      </a>
+                    </h4>
+                  </div>
+                  <div id="divIdJAN202612" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <ul type="square">
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1768918349_osce%20ioe.pdf">
+                            20-01-2026                          </a>
+                        </li>
+                                              </ul>
+                    </div>
+                  </div>
+                </div>
+                                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="https://bcps.edu.bd/result/#divIdJAN202614">
+                        FCPS (Final)                      </a>
+                    </h4>
+                  </div>
+                  <div id="divIdJAN202614" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <ul type="square">
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1768831421_Document%2075.pdf">
+                            19-01-2026                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1768918379_fcps_final.pdf">
+                            20-01-2026                          </a>
+                        </li>
+                                              </ul>
+                    </div>
+                  </div>
+                </div>
+                              </div>
+            </div>
+          </div>
+        </div>
+                <div class="row">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              Result Archive :: Final Result (PDF) -
+              JUL,2025            </div>
+            <div class="panel-body">
+              <div class="panel-group" id="accordion">
+                                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="https://bcps.edu.bd/result/#divIdJUL20251">
+                        FCPS-PART-I                      </a>
+                    </h4>
+                  </div>
+                  <div id="divIdJUL20251" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <ul type="square">
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1751947657_P-I%20July2025.pdf">
+                            07-07-2025                          </a>
+                        </li>
+                                              </ul>
+                    </div>
+                  </div>
+                </div>
+                                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="https://bcps.edu.bd/result/#divIdJUL20259">
+                        MCPS                      </a>
+                    </h4>
+                  </div>
+                  <div id="divIdJUL20259" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <ul type="square">
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1752675117_MCPS-Final.pdf">
+                            16-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1752936124_MCPS%20Final%2007-19-2025.pdf">
+                            19-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753022329_MCPS%20final,%2020-7-25.pdf">
+                            20-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753108036_MCPS_Final.pdf">
+                            21-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753281068_mcps%20final23-7-25.pdf">
+                            23-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753367855_mcps%20final24-725.pdf">
+                            24-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753540068_MCPS%20final.pdf">
+                            26-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753625754_MCPS%20%2007-27-2025.pdf">
+                            27-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753711498_MCPS%2007-28-2025.pdf">
+                            28-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753885386_MCPS07-30-2025.pdf">
+                            30-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753972962_MCPS%2007-31-2025.pdf">
+                            31-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1754145375_MCPS.pdf">
+                            02-08-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1754230215_MCPS08-03-2025%20.pdf">
+                            03-08-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1754318831_MCPS.pdf">
+                            04-08-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1754489773_MCPS%2008-06-2025.pdf">
+                            06-08-2025                          </a>
+                        </li>
+                                              </ul>
+                    </div>
+                  </div>
+                </div>
+                                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="https://bcps.edu.bd/result/#divIdJUL202511">
+                        Midterm FCPS                      </a>
+                    </h4>
+                  </div>
+                  <div id="divIdJUL202511" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <ul type="square">
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1752071139_Document%2044.pdf">
+                            09-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1752160531_Document%2045.pdf">
+                            10-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1752350197_midterm%2007-12-2025.pdf">
+                            12-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1752463992_Document%2046.pdf">
+                            13-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1752503970_mid%20medicine.pdf">
+                            14-07-2025                          </a>
+                        </li>
+                                              </ul>
+                    </div>
+                  </div>
+                </div>
+                                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="https://bcps.edu.bd/result/#divIdJUL202512">
+                        OSCE &amp; IOE                      </a>
+                    </h4>
+                  </div>
+                  <div id="divIdJUL202512" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <ul type="square">
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753022376_OSCE%20&amp;%20IOE%20result%20%2020-07-2025.pdf">
+                            20-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753108085_OSCE%20Result.pdf">
+                            21-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753191664_Result_OSCE_IOE.pdf">
+                            22-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753367932_Result_OSCE.pdf">
+                            24-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753540093_OSCE%20&amp;%20IOE.pdf">
+                            26-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753625735_OSCE%2007-27-2025.pdf">
+                            27-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753711553_FCPS%20OSCE%20&amp;%20IOE.pdf">
+                            28-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753798904_OSCE%20&amp;%20IOE.pdf">
+                            29-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753973019_OSCE%2007-31-2025.pdf">
+                            31-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1754122194_OSCE%20&amp;%20IOE.pdf">
+                            02-08-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1754292710_OSCE%2008-04-2025.pdf">
+                            04-08-2025                          </a>
+                        </li>
+                                              </ul>
+                    </div>
+                  </div>
+                </div>
+                                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="https://bcps.edu.bd/result/#divIdJUL202514">
+                        FCPS (Final)                      </a>
+                    </h4>
+                  </div>
+                  <div id="divIdJUL202514" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <ul type="square">
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1752763107_fcps%20final%2017-7-25.pdf">
+                            17-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1752936429_CamScanner%2007-19-2025%2020.42.pdf">
+                            19-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753022276_FCPS%20final%2020-7-25.pdf">
+                            20-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753108019_FCPS_Final.pdf">
+                            21-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753191648_FCPS_Result_Final.pdf">
+                            22-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753281049_fcps%20final23-7-25.pdf">
+                            23-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753367840_fcps%20final24-7-25.pdf">
+                            24-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753540042_FCPS%20(Final).pdf">
+                            26-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753625773_FCPS%20%2007-27-2025%2019.59.pdf">
+                            27-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753711448_FCPS%20%2007-28-2025.pdf">
+                            28-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753798789_FCPS%20Final.pdf">
+                            29-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753885342_FCPS%2007-30-2025.pdf">
+                            30-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753972924_FCPS%2007-31-2025.pdf">
+                            31-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1754122160_FCPS%20final.pdf">
+                            02-08-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1754145344_FCPS%20final2.pdf">
+                            02-08-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1754298409_FCPS%20%2008-04-2025_2.pdf">
+                            04-08-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1754318847_FCPS(FINAL).pdf">
+                            04-08-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1754489787_FCPS08-06-2025.pdf">
+                            06-08-2025                          </a>
+                        </li>
+                                              </ul>
+                    </div>
+                  </div>
+                </div>
+                                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="https://bcps.edu.bd/result/#divIdJUL202516">
+                        Preliminary FCPS                      </a>
+                    </h4>
+                  </div>
+                  <div id="divIdJUL202516" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <ul type="square">
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1752763050_preli%20final%2017-7-25.pdf">
+                            17-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1753367903_preli%20final24-7-25.pdf">
+                            24-07-2025                          </a>
+                        </li>
+                                                <li class="active">
+                          <a href="https://bcps.edu.bd/result/uploads/hardcopy/1754230239_Preli%2008-03-2025.pdf">
+                            03-08-2025                          </a>
+                        </li>
+                                              </ul>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <!--<div class="row">
+          <div class="panel panel-primary">
+            <div class="panel-heading">Result Archive :: Final Result (PDF) - JAN, 2022 </div>
+            <div class="panel-body">
+              <div class="panel-group" id="accordion">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion"
+                        href="#FCPSPart-I-Jan">FCPS
+                        Part-I</a></h4>
+                  </div>
+                  <div id="FCPSPart-I-Jan" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      FCPS Part-I
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion"
+                        href="#PreliminaryFCPSPart-II-Jan">Preliminary FCPS Part-II</a></h4>
+                  </div>
+                  <div id="PreliminaryFCPSPart-II-Jan" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      Preliminary FCPS Part-II
+                      <ul type="square">
+                        <li class="active"><a href="January-2022/pr11.pdf">11-1-2022</a></li>
+                        <li class="active"><a href="January-2022/pr13.pdf">13-1-2022</a></li>
+                        <li class="active"><a href="January-2022/pr30.pdf">30-1-2022</a></li>
+                        <li class="active"><a href="January-2022/pr31.pdf">31-1-2022</a></li>
+                        <li class="active"><a href="January-2022/pr3.pdf">3-2-2022</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion"
+                        href="#FCPS-Part-II-Final-Jan">FCPS Part-II (Final)</a></h4>
+                  </div>
+                  <div id="FCPS-Part-II-Final-Jan" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      FCPS Part-II (Final)
+                      <ul type="square">
+                        <li class="active"><a href="January-2022/p11.pdf">11-1-2022</a></li>
+                        <li class="active"><a href="January-2022/p12.pdf">12-1-2022</a></li>
+                        <li class="active"><a href="January-2022/p18.pdf">18-1-2022</a></li>
+                        <li class="active"><a href="January-2022/p19.pdf">19-1-2022</a></li>
+                        <li class="active"><a href="January-2022/p20.pdf">20-1-2022</a></li>
+                        <li class="active"><a href="January-2022/p22.pdf">22-1-2022</a></li>
+                        <li class="active"><a href="January-2022/p24.pdf">24-1-2022</a></li>
+                        <li class="active"><a href="January-2022/p25.pdf">25-1-2022</a></li>
+                        <li class="active"><a href="January-2022/p26.pdf">26-1-2022</a></li>
+                        <li class="active"><a href="January-2022/p27.pdf">27-1-2022</a></li>
+                        <li class="active"><a href="January-2022/p29.pdf">29-1-2022</a></li>
+                        <li class="active"><a href="January-2022/p30.pdf">30-1-2022</a></li>
+                        <li class="active"><a href="January-2022/p2.pdf">02-2-2022</a></li>
+                        <li class="active"><a href="January-2022/p3.pdf">03-2-2022</a></li>
+                        <li class="active"><a href="January-2022/p5.pdf">05-2-2022</a></li>
+                        <li class="active"><a href="January-2022/p5.pdf">05-2-2022</a></li>
+                        <li class="active"><a href="January-2022/p7.pdf">07-2-2022</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion"
+                        href="#FCPS-Sub-speciality-Jan">FCPS (Sub-speciality)</a></h4>
+                  </div>
+                  <div id="FCPS-Sub-speciality-Jan" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      FCPS (Sub-speciality)
+                      <ul type="square">
+                        <li class="active"><a href="January-2022/fcps11.pdf">11-1-2022</a></li>
+                        <li class="active"><a href="January-2022/fcps12.pdf">12-1-2022</a></li>
+                        <li class="active"><a href="January-2022/fcps17.pdf">17-1-2022</a></li>
+                        <li class="active"><a href="January-2022/fcps19.pdf">19-1-2022</a></li>
+                        <li class="active"><a href="January-2022/fcps22.pdf">22-1-2022</a></li>
+                        <li class="active"><a href="January-2022/fcps23.pdf">23-1-2022</a></li>
+                        <li class="active"><a href="January-2022/fcps25.pdf">25-1-2022</a></li>
+                        <li class="active"><a href="January-2022/fcps27.pdf">27-1-2022</a></li>
+                        <li class="active"><a href="January-2022/fcps30.pdf">30-1-2022</a></li>
+                        <li class="active"><a href="January-2022/fcps31.pdf">31-1-2022</a></li>
+                        <li class="active"><a href="January-2022/fcps1.pdf">01-2-2022</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#MCPS-Jan">MCPS</a>
+                    </h4>
+                  </div>
+                  <div id="MCPS-Jan" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      MCPS
+                      <ul type="square">
+                        <li class="active"><a href="January-2022/m11.pdf">11-1-2022</a></li>
+                        <li class="active"><a href="January-2022/m12.pdf">12-1-2022</a></li>
+                        <li class="active"><a href="January-2022/m13.pdf">13-1-2022</a></li>
+                        <li class="active"><a href="January-2022/m15.pdf">15-1-2022</a></li>
+                        <li class="active"><a href="January-2022/m16.pdf">16-1-2022</a></li>
+                        <li class="active"><a href="January-2022/m17.pdf">17-1-2022</a></li>
+                        <li class="active"><a href="January-2022/m18.pdf">18-1-2022</a></li>
+                        <li class="active"><a href="January-2022/m19.pdf">19-1-2022</a></li>
+                        <li class="active"><a href="January-2022/m20.pdf">20-1-2022</a></li>
+                        <li class="active"><a href="January-2022/m23.pdf">23-1-2022</a></li>
+                        <li class="active"><a href="January-2022/m24.pdf">24-1-2022</a></li>
+                        <li class="active"><a href="January-2022/m27.pdf">27-1-2022</a></li>
+                        <li class="active"><a href="January-2022/m1.pdf">01-2-2022</a></li>
+                        <li class="active"><a href="January-2022/m2.pdf">02-2-2022</a></li>
+                        <li class="active"><a href="January-2022/m3.pdf">03-2-2022</a></li>
+                        <li class="active"><a href="January-2022/m5.pdf">05-2-2022</a></li>
+                        <li class="active"><a href="January-2022/m0206.pdf">06-2-2022</a></li>
+                        <li class="active"><a href="January-2022/m7.pdf">07-2-2022</a></li>
+                        <li class="active"><a href="January-2022/m8.pdf">08-2-2022</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion"
+                        href="#Midterm-Jan">Midterm</a>
+                    </h4>
+                  </div>
+                  <div id="Midterm-Jan" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      Midterm
+                      <ul type="square">
+                        <li class="active"><a href="January-2022/md0206.pdf">06-2-2022</a></li>
+                        <li class="active"><a href="January-2022/md7.pdf">07-2-2022</a></li>
+                        <li class="active"><a href="January-2022/md8.pdf">08-2-2022</a></li>
+                        <li class="active"><a href="January-2022/md9.pdf">09-2-2022</a></li>
+                        <li class="active"><a href="January-2022/md10.pdf">10-2-2022</a></li>
+                        <li class="active"><a href="January-2022/md0212.pdf">12-2-2022</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion"
+                        href="#OSPEandIOE-Jan">OSPE
+                        and
+                        IOE</a></h4>
+                  </div>
+                  <div id="OSPEandIOE-Jan" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      OSPE and IOE
+                      <ul type="square">
+                        <li class="active"><a href="January-2022/ioe27.pdf">27-01-2022</a></li>
+                        <li class="active"><a href="January-2022/ioe03.pdf">03-02-2022</a></li>
+                        <li class="active"><a href="January-2022/ioe05.pdf">05-02-2022</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>-->
+      </div>
+    </div>
+  </div>
+  
+  
+  <script>
+function goToResult() {
+    window.location.href = "BCPS2.html";
+}
+</script>
+  <script>
+$(function () {
+
+  $('body').on('click', '.show', function (e) {
+    e.preventDefault(); // VERY IMPORTANT
+
+    var id = $('#id').val();
+    var exam_name = $('#exam_name').val();
+    var regex = /^[a-zA-Z]+$/;
+
+    if (exam_name == '') {
+      alert("Please Select your Exam name");
+      return;
+    } else if (!id || id.length < 6 || id.match(regex)) {
+      alert("Please enter a valid 6 digit roll number");
+      return;
+    }
+
+    // ✅ redirect instead of ajax
+    window.location.href = "BCPS2.html?roll=" + id;
+
+  });
+
+});
+</script>
+
+  
+  <div class="container">
+    <div class="row footer">
+      <div class="col-sm-5"></div>
+      <div class="col-sm-2"> @ IT Department, BCPS. </div>
+      <div class="col-sm-5"></div>
+    </div>
+  </div>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
